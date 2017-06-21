@@ -42,6 +42,13 @@ set statusline+=%-10.(%l,%c%V%)\ %<%P        " offset
 set splitbelow
 set splitright
 
+
+" buffer navigation
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+
+
 " split navigations
 
 " Ctrl-j: move to the split below
@@ -107,6 +114,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 " Powerline status bar, and fonts
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Buffer navigation
+Plugin 'ap/vim-buftabline'
 
 
 " Python
