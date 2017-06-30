@@ -116,6 +116,8 @@ Plugin 'scrooloose/nerdtree'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Buffer navigation
 Plugin 'ap/vim-buftabline'
+" Color scheme
+Plugin 'reedes/Vim-colors-pencil'
 
 
 " Python
@@ -159,4 +161,8 @@ let g:Powerline_symbols = 'fancy'
 
 " alvan/vim-closetag
 let g:closetag_filenames = "*.html, *.html, *.twig"
+
+" redees/vim-colors-pencil
+let colors_name = "pencil"
+:set background=light
 

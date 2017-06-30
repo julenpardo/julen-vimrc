@@ -12,6 +12,8 @@ My Vimrc.
  - [NERDTree](https://github.com/scrooloose/nerdtree): file browsing.
  - [Powerline](https://github.com/Lokaltog/powerline): cool status bar.
  - [vim-buftabline](https://github.com/ap/vim-buftabline): easy buffer navigation in tabs.
+ - [vim-colors-pencil](https://github.com/reedes/vim-colors-pencil): color scheme.
+
 
 ## Python
 
