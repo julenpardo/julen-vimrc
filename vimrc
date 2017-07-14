@@ -38,9 +38,13 @@ set statusline+=%{&fileformat}]              " file format
 set statusline+=%=                           " right align
 set statusline+=0x%-8B\                      " current char
 set statusline+=%-10.(%l,%c%V%)\ %<%P        " offset
+hi StatusLine ctermbg=3 ctermfg=10
+
 
 set splitbelow
 set splitright
+
+set guifont=Neep\ 18
 
 
 " buffer navigation
@@ -118,10 +122,14 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'ap/vim-buftabline'
 " Color scheme
 Plugin 'reedes/Vim-colors-pencil'
+" Code commenting
+Plugin 'scrooloose/nerdcommenter'
 
 
 " Python
 
+" Python in Vim
+Plugin 'python-mode/python-mode'
 " automatic indentation
 Plugin 'vim-scripts/indentpython.vim'
 " pep8 syntax checking
