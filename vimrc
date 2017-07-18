@@ -26,6 +26,7 @@ autocmd BufRead *.twig set syntax=html filetype=html
 """"
 
 set number
+set cursorline
 set showcmd
 set laststatus=2
 set statusline=
@@ -166,3 +167,6 @@ let g:closetag_filenames = "*.html, *.html, *.twig"
 let colors_name = "pencil"
 :set background=light
 
+" UI settings again, for overwritting the plugins configs
+highlight CursorLine ctermbg=lightgrey
+highlight LineNr ctermbg=darkgrey ctermfg=white
