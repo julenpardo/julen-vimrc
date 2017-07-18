@@ -130,10 +130,6 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Python in Vim
 Plugin 'python-mode/python-mode'
-" automatic indentation
-Plugin 'vim-scripts/indentpython.vim'
-" pep8 syntax checking
-Plugin 'nvie/vim-flake8'
 
 
 " HTML, CSS, JavaScript
@@ -154,10 +150,6 @@ filetype plugin indent on    " required
 let g:ycm_autoclose_preview_window_after_completion=1 " close autocompletion window after completion
 " goto definition: backslash + g
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-" nvie/vim-flake8
-let python_highlight_all=1
-syntax on
 
 " scrooloose/nerdtree
 autocmd VimEnter * NERDTree

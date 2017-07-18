@@ -18,9 +18,7 @@ My Vimrc.
 
 ## Python
 
- - [python-mode](https://github.com/python-mode/python-mode): commands and shortcuts for Python.
- - [indentpython](https://github.com/vim-scripts/indentpython): automatic indentation (PEP-8).
- - [vim-flake8](https://github.com/nvie/vim-flake8): PEP-8 syntax checking.
+ - [python-mode](https://github.com/python-mode/python-mode): bundle of Python plugins and libraries.
 
 ## HTML, CSS & JavaScript
 
