@@ -1,3 +1,80 @@
+"""""""""
+" Plugins
+"""""""""
+
+" Vundle
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+""""""""""""""""""""""
+" Plugin specification
+""""""""""""""""""""""
+
+" General
+
+" (amazing) autocompletion
+Bundle 'Valloric/YouCompleteMe'
+" syntax checking
+Plugin 'scrooloose/syntastic'
+" File Browsing
+Plugin 'scrooloose/nerdtree'
+" Powerline status bar, and fonts
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Buffer navigation
+Plugin 'ap/vim-buftabline'
+" Color scheme
+Plugin 'reedes/Vim-colors-pencil'
+" Code commenting
+Plugin 'scrooloose/nerdcommenter'
+
+
+" Python
+
+" Python in Vim
+Plugin 'python-mode/python-mode'
+
+
+" HTML, CSS, JavaScript
+
+" autoclosing tags
+Plugin 'alvan/vim-closetag'
+" emmet: fast HTML development
+Plugin 'mattn/emmet-vim'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"""""""""""""""""""""""
+" Plugins configuration
+"""""""""""""""""""""""
+
+" Valloric/YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1 " close autocompletion window after completion
+" goto definition: backslash + g
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" scrooloose/nerdtree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+" Lokaltog/powerline
+let g:Powerline_symbols = 'fancy'
+
+" alvan/vim-closetag
+let g:closetag_filenames = "*.html, *.html, *.twig"
+
+" redees/vim-colors-pencil
+let colors_name = "pencil"
+:set background=light
+
 set nocompatible
 set encoding=utf-8
 set term=screen-256color
@@ -17,7 +94,6 @@ set shiftwidth=4  " number of spaces to introduce on return for control structur
 """""""""""""""""
 
 syntax enable
-set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd BufRead *.wsgi set syntax=python filetype=python
 autocmd BufRead *.twig set syntax=html filetype=html
 
@@ -25,6 +101,7 @@ autocmd BufRead *.twig set syntax=html filetype=html
 " UI
 """"
 
+highlight ExtraWhitespace ctermbg=red
 set number
 set cursorline
 set showcmd
@@ -40,6 +117,8 @@ set statusline+=%=                           " right align
 set statusline+=0x%-8B\                      " current char
 set statusline+=%-10.(%l,%c%V%)\ %<%P        " offset
 hi StatusLine ctermbg=3 ctermfg=10
+highlight CursorLine ctermbg=lightgrey
+highlight LineNr ctermbg=darkgrey ctermfg=white
 
 
 set splitbelow
@@ -88,85 +167,3 @@ set ignorecase
 highlight ExtraWhitespace ctermbg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 
-" Mark excesively long lines.
-highlight ColorColumn ctermbg=red
-call matchadd('ColorColumn', '\%101v', 100)
-
-"""""""""
-" Plugins
-"""""""""
-
-" Vundle
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-""""""""""""""""""""""
-" Plugin specification
-""""""""""""""""""""""
-
-" General
-
-" (amazing) autocompletion
-Bundle 'Valloric/YouCompleteMe'
-" syntax checking
-Plugin 'scrooloose/syntastic'
-" File Browsing
-Plugin 'scrooloose/nerdtree'
-" Powerline status bar, and fonts
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-" Buffer navigation
-Plugin 'ap/vim-buftabline'
-" Color scheme
-Plugin 'reedes/Vim-colors-pencil'
-" Code commenting
-Plugin 'scrooloose/nerdcommenter'
-
-
-" Python
-
-" Python in Vim
-Plugin 'python-mode/python-mode'
-
-
-" HTML, CSS, JavaScript
-
-" autoclosing tags
-Plugin 'alvan/vim-closetag'
-
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-"""""""""""""""""""""""
-" Plugins configuration
-"""""""""""""""""""""""
-
-" Valloric/YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion=1 " close autocompletion window after completion
-" goto definition: backslash + g
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-" scrooloose/nerdtree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-
-" Lokaltog/powerline
-let g:Powerline_symbols = 'fancy'
-
-" alvan/vim-closetag
-let g:closetag_filenames = "*.html, *.html, *.twig"
-
-" redees/vim-colors-pencil
-let colors_name = "pencil"
-:set background=light
-
-" UI settings again, for overwritting the plugins configs
-highlight CursorLine ctermbg=lightgrey
-highlight LineNr ctermbg=darkgrey ctermfg=white

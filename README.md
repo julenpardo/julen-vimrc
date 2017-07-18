@@ -20,7 +20,12 @@ My Vimrc.
 
  - [python-mode](https://github.com/python-mode/python-mode): bundle of Python plugins and libraries.
 
+## PHP
+
+ - [vim-php-cs-fixer](https://github.com/stephpy/vim-php-cs-fixer): PHP syntax fixer.
+
 ## HTML, CSS & JavaScript
 
- - [alvan/vim-closetag](https://github.com/alvan/vim-closetag): HTML tag autoclose.
+ - [vim-closetag](https://github.com/alvan/vim-closetag): HTML tag autoclose.
+ - [emmet-vim](https://github.com/mattn/emmet-vim): fast HTML development.
 

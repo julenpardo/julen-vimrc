@@ -21,6 +21,10 @@ sudo apt-get install -y python-dev \
 sudo pip2 install powerline-status
 sudo pip3 install powerline-status
 
+# php-cs-fixer
+sudo wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O /usr/local/bin/php-cs-fixer
+sudo chmod a+rx /usr/local/bin/php-cs-fixer
+
 # Fix permissions, just in case
 sudo su -c "chown -R $USERNAME:$USERNAME $USER_HOME/.vim"
 sudo su -c "chmod u+rwx -R $USER_HOME/.vim/*"
