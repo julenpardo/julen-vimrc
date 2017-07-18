@@ -37,6 +37,8 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Python in Vim
 Plugin 'python-mode/python-mode'
+" Doctring generator
+Plugin 'heavenshell/vim-pydocstring'
 
 
 " HTML, CSS, JavaScript
