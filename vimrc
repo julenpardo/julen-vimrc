@@ -1,6 +1,6 @@
 set nocompatible
 set encoding=utf-8
-set term=xterm-256color
+set term=screen-256color
 filetype off
 
 """""""""
