@@ -35,8 +35,6 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Python
 
-" Python in Vim
-Plugin 'python-mode/python-mode'
 " Doctring generator
 Plugin 'heavenshell/vim-pydocstring'
 

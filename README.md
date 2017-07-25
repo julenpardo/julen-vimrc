@@ -18,7 +18,6 @@ My Vimrc.
 
 ## Python
 
- - [python-mode](https://github.com/python-mode/python-mode): bundle of Python plugins and libraries.
  - [vim-pydocstring](https://github.com/heavenshell/vim-pydocstring): docstring generator.
 
 ## PHP
