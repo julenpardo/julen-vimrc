@@ -17,8 +17,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " General
 
-" (amazing) autocompletion
-Bundle 'Valloric/YouCompleteMe'
 " syntax checking
 Plugin 'scrooloose/syntastic'
 " File Browsing
@@ -37,6 +35,8 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Doctring generator
 Plugin 'heavenshell/vim-pydocstring'
+" Autocomplete
+Plugin 'davidhalter/jedi-vim'
 
 
 " HTML, CSS, JavaScript
@@ -45,6 +45,10 @@ Plugin 'heavenshell/vim-pydocstring'
 Plugin 'alvan/vim-closetag'
 " emmet: fast HTML development
 Plugin 'mattn/emmet-vim'
+" JavaScript syntax
+Plugin 'jelera/vim-javascript-syntax'
+" Highlight enclosing tags
+Plugin 'Valloric/MatchTagAlways'
 
 
 " All of your Plugins must be added before the following line
@@ -54,11 +58,6 @@ filetype plugin indent on    " required
 """""""""""""""""""""""
 " Plugins configuration
 """""""""""""""""""""""
-
-" Valloric/YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion=1 " close autocompletion window after completion
-" goto definition: backslash + g
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " scrooloose/nerdtree
 autocmd VimEnter * NERDTree
@@ -96,6 +95,7 @@ set shiftwidth=4  " number of spaces to introduce on return for control structur
 syntax enable
 autocmd BufRead *.wsgi set syntax=python filetype=python
 autocmd BufRead *.twig set syntax=html filetype=html
+autocmd BufRead *.vue set syntax=html filetype=html
 
 """"
 " UI

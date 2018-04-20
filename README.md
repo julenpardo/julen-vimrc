@@ -7,7 +7,6 @@ My Vimrc.
 
 ## General
 
- - [YouCompleteMe](https://github.com/valloric/youcompleteme): (amazing) code completion.
  - [syntastic](https://github.com/vim-syntastic/syntastic): multi-language syntax checking.
  - [NERDTree](https://github.com/scrooloose/nerdtree): file browsing.
  - [Powerline](https://github.com/Lokaltog/powerline): cool status bar.
@@ -18,6 +17,7 @@ My Vimrc.
 
 ## Python
 
+ - [jedi-vim](https://github.com/davidhalter/jedi-vim): code completion using Jedi.
  - [vim-pydocstring](https://github.com/heavenshell/vim-pydocstring): docstring generator.
 
 ## PHP
@@ -28,4 +28,3 @@ My Vimrc.
 
  - [vim-closetag](https://github.com/alvan/vim-closetag): HTML tag autoclose.
  - [emmet-vim](https://github.com/mattn/emmet-vim): fast HTML development.
-
