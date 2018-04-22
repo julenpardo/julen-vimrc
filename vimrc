@@ -26,7 +26,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Buffer navigation
 Plugin 'ap/vim-buftabline'
 " Color scheme
-Plugin 'reedes/Vim-colors-pencil'
+Plugin 'morhetz/gruvbox'
 " Code commenting
 Plugin 'scrooloose/nerdcommenter'
 
@@ -70,14 +70,13 @@ let g:Powerline_symbols = 'fancy'
 " alvan/vim-closetag
 let g:closetag_filenames = "*.html, *.html, *.twig"
 
-" redees/vim-colors-pencil
-let colors_name = "pencil"
-:set background=dark
-
+" morhetz/gruvbox
+let g:gruvbox_italic=1
+set background=dark
+colorscheme gruvbox
 
 set nocompatible
 set encoding=utf-8
-set term=screen-256color
 filetype off
 
 """""""""
