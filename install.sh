@@ -3,38 +3,49 @@
 USERNAME=$USER
 USER_HOME=$HOME
 
-# Copy config
-cp vimrc "$USER_HOME/.vimrc"
+option=$1
 
-# Vundle installation
-git clone https://github.com/gmarik/Vundle.vim.git "$USER_HOME/.vim/bundle/Vundle.vim"
 
-sudo apt-get update
+if [ "$option" = "--rc-only" ]
+then
+    # Copy config
+    cp vimrc "$USER_HOME/.vimrc"
+fi
 
-# Valloric/YouCompleteMe
-sudo apt-get install -y python-dev \
-                        python3-dev
+if [ "$option" = "" ]
+then
+    # Copy config
+    cp vimrc "$USER_HOME/.vimrc"
 
-# Powerline
-sudo pip2 install powerline-status \
-                  jedi
-sudo pip3 install powerline-status \
-                  jedi
+    # Vundle installation
+    git clone https://github.com/gmarik/Vundle.vim.git "$USER_HOME/.vim/bundle/Vundle.vim"
 
-# php-cs-fixer
-sudo wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O /usr/local/bin/php-cs-fixer
-sudo chmod a+rx /usr/local/bin/php-cs-fixer
+    sudo apt-get update
 
-# Fix permissions, just in case
-sudo su -c "chown -R $USERNAME:$USERNAME $USER_HOME/.vim"
-sudo su -c "chmod u+rwx -R $USER_HOME/.vim/*"
+    # Valloric/YouCompleteMe
+    sudo apt-get install -y python-dev \
+                            python3-dev
 
-# Install plugins with Vundle
-vim +PluginInstall +qall!
+    # Powerline
+    sudo pip2 install powerline-status \
+                      jedi
+    sudo pip3 install powerline-status \
+                      jedi
 
-# Install fonts for Powerline
-git clone https://github.com/powerline/fonts /tmp/powerline_fonts
-cd /tmp/powerline_fonts
-./install.sh
-rm -rf /tmp/powerline_fonts/
+    # php-cs-fixer
+    sudo wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O /usr/local/bin/php-cs-fixer
+    sudo chmod a+rx /usr/local/bin/php-cs-fixer
 
+    # Fix permissions, just in case
+    sudo su -c "chown -R $USERNAME:$USERNAME $USER_HOME/.vim"
+    sudo su -c "chmod u+rwx -R $USER_HOME/.vim/*"
+
+    # Install plugins with Vundle
+    vim +PluginInstall +qall!
+
+    # Install fonts for Powerline
+    git clone https://github.com/powerline/fonts /tmp/powerline_fonts
+    cd /tmp/powerline_fonts
+    ./install.sh
+    rm -rf /tmp/powerline_fonts/
+fi

@@ -72,7 +72,8 @@ let g:closetag_filenames = "*.html, *.html, *.twig"
 
 " redees/vim-colors-pencil
 let colors_name = "pencil"
-:set background=light
+:set background=dark
+
 
 set nocompatible
 set encoding=utf-8
@@ -117,7 +118,7 @@ set statusline+=%=                           " right align
 set statusline+=0x%-8B\                      " current char
 set statusline+=%-10.(%l,%c%V%)\ %<%P        " offset
 hi StatusLine ctermbg=3 ctermfg=10
-highlight CursorLine ctermbg=lightgrey
+highlight CursorLine ctermbg=darkgrey
 highlight LineNr ctermbg=darkgrey ctermfg=white
 
 
