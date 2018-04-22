@@ -22,15 +22,17 @@ then
 
     sudo apt-get update
 
-    # Valloric/YouCompleteMe
+    # Dependencies
     sudo apt-get install -y python-dev \
                             python3-dev
 
-    # Powerline
+    # Pip dependencies 
     sudo pip2 install powerline-status \
-                      jedi
+                      jedi \
+                      flake8
     sudo pip3 install powerline-status \
-                      jedi
+                      jedi \
+                      flake8
 
     # php-cs-fixer
     sudo wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O /usr/local/bin/php-cs-fixer

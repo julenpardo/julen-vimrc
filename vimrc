@@ -37,6 +37,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'heavenshell/vim-pydocstring'
 " Autocomplete
 Plugin 'davidhalter/jedi-vim'
+" PEP8 indentation
+Plugin 'vim-scripts/indentpython.vim'
+" PEP8 style checking
+Plugin 'nvie/vim-flake8'
 
 
 " HTML, CSS, JavaScript
@@ -143,6 +147,27 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 " Ctrl-h: move to the split to the left
 nnoremap <C-H> <C-W><C-H>
+
+syntax on
+
+""""""""
+" Python
+""""""""
+
+""""""""""""""""""
+" PEP8 indentation
+""""""""""""""""""
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+let python_highlight_all=1
+
 
 """""""""""""""""
 " Functionalities

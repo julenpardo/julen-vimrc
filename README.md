@@ -19,6 +19,8 @@ My Vimrc.
 
  - [jedi-vim](https://github.com/davidhalter/jedi-vim): code completion using Jedi.
  - [vim-pydocstring](https://github.com/heavenshell/vim-pydocstring): docstring generator.
+ - [indentpython](https://github.com/vim-scripts/indentpython.vim): PEP8 indentation.
+ - [vim-flake8](https://github.com/nvie/vim-flake8): PEP8 style checking.
 
 ## PHP
 
