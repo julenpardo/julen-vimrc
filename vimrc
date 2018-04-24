@@ -17,8 +17,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " General
 
-" syntax checking
-Plugin 'scrooloose/syntastic'
 " File Browsing
 Plugin 'scrooloose/nerdtree'
 " Powerline status bar, and fonts
@@ -29,6 +27,9 @@ Plugin 'ap/vim-buftabline'
 Plugin 'morhetz/gruvbox'
 " Code commenting
 Plugin 'scrooloose/nerdcommenter'
+" Markdown syntax
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 
 " Python
@@ -45,11 +46,11 @@ Plugin 'nvie/vim-flake8'
 
 " HTML, CSS, JavaScript
 
-" autoclosing tags
+" Autoclosing tags
 Plugin 'alvan/vim-closetag'
 " Highlight enclosing tags
 Plugin 'Valloric/MatchTagAlways'
-" JavaScript syntax (works for inline js!)
+" JavaScript highlight (works for inline js!)
 Plugin 'pangloss/vim-javascript'
 
 
