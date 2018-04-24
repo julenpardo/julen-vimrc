@@ -47,12 +47,10 @@ Plugin 'nvie/vim-flake8'
 
 " autoclosing tags
 Plugin 'alvan/vim-closetag'
-" emmet: fast HTML development
-Plugin 'mattn/emmet-vim'
-" JavaScript syntax
-Plugin 'jelera/vim-javascript-syntax'
 " Highlight enclosing tags
 Plugin 'Valloric/MatchTagAlways'
+" JavaScript syntax (works for inline js!)
+Plugin 'pangloss/vim-javascript'
 
 
 " All of your Plugins must be added before the following line
@@ -72,7 +70,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let g:Powerline_symbols = 'fancy'
 
 " alvan/vim-closetag
-let g:closetag_filenames = "*.html, *.html, *.twig"
+let g:closetag_filenames = "*.html, *.twig, *.vue, *.xml"
 
 " morhetz/gruvbox
 let g:gruvbox_italic=1
@@ -167,6 +165,17 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 let python_highlight_all=1
+
+
+""""""""""
+" HTML, JS
+""""""""""
+au BufNewFile,BufRead *.html,*.twig,*.vue,*.js
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set autoindent |
+    \ set fileformat=unix
 
 
 """""""""""""""""

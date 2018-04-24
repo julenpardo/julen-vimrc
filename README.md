@@ -29,7 +29,8 @@ My Vimrc.
 ## HTML, CSS & JavaScript
 
  - [vim-closetag](https://github.com/alvan/vim-closetag): HTML tag autoclose.
- - [emmet-vim](https://github.com/mattn/emmet-vim): fast HTML development.
+ - [MatchTagAlways](https://github.com/Valloric/MatchTagAlways): highlight enclosing tags.
+ - [vim-javascript](https://github.com/pangloss/vim-javascript): JavaScript syntax (works for inline js!).
 
 # Not used plugins
 

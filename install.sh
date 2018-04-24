@@ -26,7 +26,7 @@ then
     sudo apt-get install -y python-dev \
                             python3-dev
 
-    # Pip dependencies 
+    # Pip dependencies
     sudo pip2 install powerline-status \
                       jedi \
                       flake8
@@ -44,10 +44,4 @@ then
 
     # Install plugins with Vundle
     vim +PluginInstall +qall!
-
-    # Install fonts for Powerline
-    git clone https://github.com/powerline/fonts /tmp/powerline_fonts
-    cd /tmp/powerline_fonts
-    ./install.sh
-    rm -rf /tmp/powerline_fonts/
 fi
