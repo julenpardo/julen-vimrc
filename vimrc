@@ -30,6 +30,10 @@ Plugin 'scrooloose/nerdcommenter'
 " Markdown syntax
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+" Rename files
+Plugin 'danro/rename.vim'
+" Surrouning
+Plugin 'tpope/vim-surround'
 
 
 " Python

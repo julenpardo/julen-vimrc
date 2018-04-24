@@ -12,7 +12,9 @@ My Vimrc.
  - [Powerline](https://github.com/Lokaltog/powerline): cool status bar.
  - [vim-buftabline](https://github.com/ap/vim-buftabline): easy buffer navigation in tabs.
  - [nerdcommenter](https://github.com/scrooloose/nerdcommenter): code commenting.
- - [plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown): Markdown syntax and preview.
+ - [vim-markdown](https://github.com/plasticboy/vim-markdown): Markdown syntax and preview.
+ - [rename.vim](https://github.com/danro/rename.vim): Rename files (need a plugin for this?).
+ - [vim-surround](https://github.com/tpope/vim-surround): bracket, quote, etc. wrapping.
 
 
 ## Python
