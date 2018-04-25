@@ -17,6 +17,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " General
 
+" Asynchronous lint
+Plugin 'w0rp/ale'
 " File Browsing
 Plugin 'scrooloose/nerdtree'
 " Powerline status bar, and fonts
