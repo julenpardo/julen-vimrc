@@ -46,8 +46,6 @@ Plugin 'heavenshell/vim-pydocstring'
 Plugin 'davidhalter/jedi-vim'
 " PEP8 indentation
 Plugin 'vim-scripts/indentpython.vim'
-" PEP8 style checking
-Plugin 'nvie/vim-flake8'
 
 
 " HTML, CSS, JavaScript
@@ -67,6 +65,22 @@ filetype plugin indent on    " required
 """""""""""""""""""""""
 " Plugins configuration
 """""""""""""""""""""""
+
+" ALE
+let g:ale_linters = {
+\    'python': ['pylint', 'flake8'],
+\    'javascript': ['eslint'],
+\    'php': ['phpcs'],
+\    'html': ['eslint', 'htmlhint'],
+\}
+let g:ale_fixers = {
+\    'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
+\    'javascript': ['eslint', 'remove_trailing_lines', 'trim_whitespace'],
+\    'php': ['phpcbf', 'remove_trailing_lines', 'trim_whitespace'],
+\    'html': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+let g:ale_completion_enabled = 1
+let g:ale_fix_on_save = 1
 
 " scrooloose/nerdtree
 autocmd VimEnter * NERDTree

@@ -9,14 +9,37 @@ sudo apt-get update
 sudo apt-get install -y python-dev \
                         python3-dev
 
-# Pip dependencies
+################
+# Python modules
+################
 sudo pip2 install powerline-status \
                   jedi \
-                  flake8
+                  pylint \
+                  flake8 \
+                  gitlint \
+                  autopep8
 sudo pip3 install powerline-status \
                   jedi \
-                  flake8
+                  pylint \
+                  flake8 \
+                  gitlint \
+                  autopep8
 
-# php-cs-fixer
-sudo wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O /usr/local/bin/php-cs-fixer
-sudo chmod a+rx /usr/local/bin/php-cs-fixer
+#############
+# PHP modules
+#############
+
+# PHP CodeSniffer
+sudo wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -O /usr/local/bin/phpcs
+sudo chmod a+rx /usr/local/bin/phpcs
+
+# PHP CodeSniffer fixer
+sudo wget https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar -O /usr/local/bin/phpcbf
+sudo chmod a+rx /usr/local/bin/phpcbf
+
+####################
+# JavaScript modules
+####################
+
+sudo npm install -g eslint \
+                    htmlhint

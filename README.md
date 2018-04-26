@@ -15,7 +15,7 @@ My Vimrc.
  - [vim-markdown](https://github.com/plasticboy/vim-markdown): Markdown syntax and preview.
  - [rename.vim](https://github.com/danro/rename.vim): Rename files (need a plugin for this?).
 
-### Language agnostic
+## Language agnostic
 
  - [ale](https://github.com/w0rp/ale): asynchronous linting.
  - [vim-surround](https://github.com/tpope/vim-surround): bracket, quote, etc. wrapping.
