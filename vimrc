@@ -56,6 +56,8 @@ Plugin 'alvan/vim-closetag'
 Plugin 'Valloric/MatchTagAlways'
 " JavaScript highlight (works for inline js!)
 Plugin 'pangloss/vim-javascript'
+" Vue highlighting
+Plugin 'posva/vim-vue'
 
 
 " All of your Plugins must be added before the following line
@@ -69,15 +71,16 @@ filetype plugin indent on    " required
 " ALE
 let g:ale_linters = {
 \    'python': ['pylint', 'flake8'],
-\    'javascript': ['eslint'],
+\    'javascript': ['eslint', 'jshint', 'prettier'],
 \    'php': ['phpcs'],
 \    'html': ['eslint', 'htmlhint'],
 \}
 let g:ale_fixers = {
 \    'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
-\    'javascript': ['eslint', 'remove_trailing_lines', 'trim_whitespace'],
+\    'javascript': ['eslint', 'prettier', 'remove_trailing_lines', 'trim_whitespace'],
 \    'php': ['phpcbf', 'remove_trailing_lines', 'trim_whitespace'],
 \    'html': ['remove_trailing_lines', 'trim_whitespace'],
+\    'vue': ['eslint', 'prettier'],
 \}
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
@@ -118,7 +121,6 @@ set shiftwidth=4  " number of spaces to introduce on return for control structur
 syntax enable
 autocmd BufRead *.wsgi set syntax=python filetype=python
 autocmd BufRead *.twig set syntax=html filetype=html
-autocmd BufRead *.vue set syntax=html filetype=html
 
 """"
 " UI

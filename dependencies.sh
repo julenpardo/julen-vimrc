@@ -42,4 +42,6 @@ sudo chmod a+rx /usr/local/bin/phpcbf
 ####################
 
 sudo npm install -g eslint \
+                    jshint \
+                    prettier \
                     htmlhint
