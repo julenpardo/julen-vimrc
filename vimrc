@@ -5,7 +5,7 @@
 " Vundle
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -71,37 +71,51 @@ filetype plugin indent on    " required
 " ALE
 let g:ale_linters = {
 \    'python': ['pylint', 'flake8'],
-\    'javascript': ['eslint', 'jshint', 'prettier'],
+\    'javascript': ['eslint', 'jshint'],
 \    'php': ['phpcs'],
 \    'html': ['eslint', 'htmlhint'],
+\    'json': ['jsonlint'],
+\    'vue': ['eslint'],
+\    'css': ['csslint'],
+\    'markdown': ['mdl'],
 \}
+
+let g:ale_php_phpcs_standard = 'psr2'
+
 let g:ale_fixers = {
 \    'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
 \    'javascript': ['eslint', 'prettier', 'remove_trailing_lines', 'trim_whitespace'],
-\    'php': ['phpcbf', 'remove_trailing_lines', 'trim_whitespace'],
+\    'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
 \    'html': ['remove_trailing_lines', 'trim_whitespace'],
-\    'vue': ['eslint', 'prettier'],
+\    'json': ['fixjson', 'prettier', 'remove_trailing_lines', 'trim_whitespace'],
+\    'vue': ['eslint', 'remove_trailing_lines', 'trim_whitespace'],
+\    'vim': ['remove_trailing_lines', 'trim_whitespace'],
+\    'css': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
+\    'markdown': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 
 " scrooloose/nerdtree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+augroup nerdtree
+    autocmd!
+    autocmd VimEnter * NERDTree
+    autocmd VimEnter * wincmd p
+augroup END
+
+let g:NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Lokaltog/powerline
 let g:Powerline_symbols = 'fancy'
 
 " alvan/vim-closetag
-let g:closetag_filenames = "*.html, *.twig, *.vue, *.xml"
+let g:closetag_filenames = '*.html, *.twig, *.vue, *.xml'
 
 " morhetz/gruvbox
 let g:gruvbox_italic=1
 set background=dark
 colorscheme gruvbox
 
-set nocompatible
 set encoding=utf-8
 filetype off
 
@@ -119,8 +133,11 @@ set shiftwidth=4  " number of spaces to introduce on return for control structur
 """""""""""""""""
 
 syntax enable
-autocmd BufRead *.wsgi set syntax=python filetype=python
-autocmd BufRead *.twig set syntax=html filetype=html
+augroup set_filetypes
+    autocmd!
+    autocmd BufRead *.wsgi set syntax=python filetype=python
+    autocmd BufRead *.twig set syntax=html filetype=html
+augroup END
 
 """"
 " UI
@@ -187,7 +204,7 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
-let python_highlight_all=1
+let g:python_highlight_all=1
 
 
 """"""""""
@@ -223,4 +240,3 @@ set ignorecase
 " Show trailing whitespaces.
 highlight ExtraWhitespace ctermbg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
-
