@@ -13,14 +13,12 @@ sudo apt-get install -y python-dev \
 # Python modules
 ################
 sudo pip2 install powerline-status \
-                  jedi \
                   pylint \
                   flake8 \
                   gitlint \
                   vim-vint \
                   autopep8
 sudo pip3 install powerline-status \
-                  jedi \
                   pylint \
                   flake8 \
                   gitlint \

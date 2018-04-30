@@ -36,14 +36,14 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'danro/rename.vim'
 " Surrouning
 Plugin 'tpope/vim-surround'
+" Autocomplete
+Plugin 'Valloric/YouCompleteMe'
 
 
 " Python
 
 " Doctring generator
 Plugin 'heavenshell/vim-pydocstring'
-" Autocomplete
-Plugin 'davidhalter/jedi-vim'
 " PEP8 indentation
 Plugin 'vim-scripts/indentpython.vim'
 
