@@ -101,6 +101,7 @@ augroup nerdtree
     autocmd!
     autocmd VimEnter * NERDTree
     autocmd VimEnter * wincmd p
+    autocmd BufEnter * if (winnr("$") == 1 && bufname(0) == 'NERD_tree_1') | q | endif
 augroup END
 
 let g:NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
@@ -133,11 +134,6 @@ set shiftwidth=4  " number of spaces to introduce on return for control structur
 """""""""""""""""
 
 syntax enable
-augroup set_filetypes
-    autocmd!
-    autocmd BufRead *.wsgi set syntax=python filetype=python
-    autocmd BufRead *.twig set syntax=html filetype=html
-augroup END
 
 """"
 " UI
@@ -168,23 +164,6 @@ set splitright
 
 set guifont=Neep\ 18
 
-
-" buffer navigation
-set hidden
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
-
-
-" split navigations
-
-" Ctrl-j: move to the split below
-nnoremap <C-J> <C-W><C-J>
-" Ctrl-k: move to the split above
-nnoremap <C-K> <C-W><C-K>
-" Ctrl-l: move to the split to the right
-nnoremap <C-L> <C-W><C-L>
-" Ctrl-h: move to the split to the left
-nnoremap <C-H> <C-W><C-H>
 
 syntax on
 
@@ -223,7 +202,69 @@ au BufNewFile,BufRead *.html,*.twig,*.vue,*.js
 """""""""""""""""
 set foldmethod=indent
 set foldlevel=99
-nnoremap <space> za
+
+"""""""""""""""""
+" Custom mappings
+"""""""""""""""""
+
+let g:mapleader = "\<Space>"
+
+" Return from insert mode to normal mode
+inoremap jk <Esc>
+
+" Buffer navigation
+set hidden
+nnoremap <C-N> :bnext<cr>
+nnoremap <C-P> :bprev<cr>
+
+" Split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <Up> :resize +2<cr>
+nnoremap <Down> :resize -2<cr>
+nnoremap <Left> :vertical resize +2<cr>
+nnoremap <Right> :vertical resize -2<cr>
+
+" Fast save and exit
+nnoremap <Leader>w :w<cr>
+nnoremap <Leader>W :wa<cr>
+nnoremap <Leader>q :q<cr>
+nnoremap <Leader>Q :qa<cr>
+nnoremap <Leader>r :e!kcr>
+nnoremap <Leader>d :bprev\|bd #<cr>
+
+" Copy-pasting
+inoremap <C-D> <Esc>ddi
+inoremap <C-V> <Esc>pA
+inoremap <C-X> <Esc>yyli
+
+" Source vimrc
+nnoremap <Leader>sv :source $MYVIMRC<cr>
+
+" Disable old keys to force myself to use mappings
+nnoremap :w <Nop>
+nnoremap :wa <Nop>
+nnoremap :q <Nop>
+nnoremap :qa <Nop>
+nnoremap :bd <Nop>
+inoremap <Esc> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
+
+""""""""""""""
+" Autocommands
+""""""""""""""
+augroup set_filetypes
+    autocmd!
+    autocmd BufRead *.wsgi set syntax=python filetype=python
+    autocmd BufRead *.twig set syntax=html filetype=html
+augroup END
+
 
 """""""""""
 " Searching
