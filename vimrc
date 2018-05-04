@@ -204,7 +204,7 @@ set foldmethod=indent
 set foldlevel=99
 
 """""""""""""""""
-" Custom mappings
+" Mappings
 """""""""""""""""
 
 let g:mapleader = "\<Space>"
@@ -232,6 +232,7 @@ nnoremap <Leader>w :w<cr>
 nnoremap <Leader>W :wa<cr>
 nnoremap <Leader>q :q<cr>
 nnoremap <Leader>Q :qa<cr>
+nnoremap <Leader>! :qa!<cr>
 nnoremap <Leader>r :e!kcr>
 nnoremap <Leader>d :bprev\|bd #<cr>
 
@@ -240,20 +241,23 @@ inoremap <C-D> <Esc>ddi
 inoremap <C-V> <Esc>pA
 inoremap <C-X> <Esc>yyli
 
+" Insert new line below, usefull for if, for, etc. statements
+inoremap <C-Space> <Esc>o
+
 " Source vimrc
 nnoremap <Leader>sv :source $MYVIMRC<cr>
 
 " Disable old keys to force myself to use mappings
-nnoremap :w <Nop>
-nnoremap :wa <Nop>
-nnoremap :q <Nop>
-nnoremap :qa <Nop>
-nnoremap :bd <Nop>
-inoremap <Esc> <Nop>
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
+"nnoremap :w <Nop>
+"nnoremap :wa <Nop>
+"nnoremap :q <Nop>
+"nnoremap :qa <Nop>
+"nnoremap :bd <Nop>
+"inoremap <Esc> <Nop>
+"inoremap <Up> <Nop>
+"inoremap <Down> <Nop>
+"inoremap <Left> <Nop>
+"inoremap <Right> <Nop>
 
 
 """"""""""""""
@@ -263,6 +267,30 @@ augroup set_filetypes
     autocmd!
     autocmd BufRead *.wsgi set syntax=python filetype=python
     autocmd BufRead *.twig set syntax=html filetype=html
+augroup END
+
+augroup python_abbreviations
+    autocmd!
+    autocmd FileType python :inoreabbrev <buffer> i if:<Left>
+    autocmd FileType python :inoreabbrev <buffer> f for:<Left>
+    autocmd FileType python :inoreabbrev <buffer> w while:<Left>
+    autocmd FileType python :inoreabbrev <buffer> d def():<Esc>bi
+augroup END
+
+augroup php_abbreviations
+    autocmd!
+    autocmd FileType php :inoreabbrev <buffer> i if () {<cr>}<Esc>k2ei
+    autocmd FileType php :inoreabbrev <buffer> f for () {<cr>}<Esc>k2ei
+    autocmd FileType php :inoreabbrev <buffer> w while () {<cr>}<Esc>k2ei
+    autocmd FileType php :inoreabbrev <buffer> fu function()<cr>{<cr>}<Esc>2kwi
+augroup END
+
+augroup javascript_abbreviations
+    autocmd!
+    autocmd FileType javascript :inoreabbrev <buffer> i if () {<cr>}<Esc>k2ei
+    autocmd FileType javascript :inoreabbrev <buffer> f for () {<cr>}<Esc>k2ei
+    autocmd FileType javascript :inoreabbrev <buffer> w while () {<cr>}<Esc>k2ei
+    autocmd FileType javascript :inoreabbrev <buffer> fu function() {<cr>}<Esc>kwi
 augroup END
 
 
