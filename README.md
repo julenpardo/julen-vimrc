@@ -2,6 +2,34 @@
 
 My Vimrc with plugins, autocommands, etc for **Vim 8**.
 
+## Table of Contents
+
+<!-- toc -->
+
+* [Plugins](#plugins)
+  * [General](#general)
+  * [Language agnostic](#language-agnostic)
+  * [Python](#python)
+  * [HTML, CSS & JavaScript](#html-css--javascript)
+  * [Linters and formatting for ALE](#linters-and-formatting-for-ale)
+  * [Not used plugins](#not-used-plugins)
+* [Custom mappings, autocommands, abbreviations, etc](#custom-mappings-autocommands-abbreviations-etc)
+  * [Mappings](#mappings)
+    * [Normal mode](#normal-mode)
+      * [Buffer navigation](#buffer-navigation)
+      * [Splits](#splits)
+      * [Oders](#oders)
+      * [File management](#file-management)
+    * [Insert mode](#insert-mode)
+  * [Abbreviations](#abbreviations)
+    * [Python abbreviations](#python-abbreviations)
+    * [PHP abbreviations](#php-abbreviations)
+    * [JavaScript abbreviations](#javascript-abbreviations)
+
+<!-- tocstop -->
+
+<sub>Generated with [markdown-toc](https://github.com/jonschlinkert/markdown-toc)</sub>
+
 ## Plugins
 
 ### General
@@ -42,43 +70,15 @@ My Vimrc with plugins, autocommands, etc for **Vim 8**.
 For linting and formatting, ALE needs these tools to be installed in the system.
 The tools installed (with `dependencies.sh` script) are the following:
 
-#### Python linters and formatters
-
-* [pylint](https://www.pylint.org/)
-* [flake8](https://github.com/PyCQA/flake8)
-* [autopep8](https://github.com/hhatto/autopep8)
-
-#### PHP linters and formatters
-
-* [phpcs](https://github.com/squizlabs/PHP_CodeSniffer)
-* [phpcbf](https://github.com/squizlabs/PHP_CodeSniffer) (part of phpcs).
-* [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
-
-#### HTML linters and formatters
-
-* [htmlhint](https://github.com/yaniswang/HTMLHint)
-
-#### JavaScript linters and formatters
-
-* [eslint](https://eslint.org/) (Also set for Vue.js).
-* [jshint](http://jshint.com/)
-* [prettier](https://github.com/prettier/prettier)
-
-#### CSS linters and formatters
-
-* [csslint](https://github.com/CSSLint/csslint)
-* [prettier](https://github.com/prettier/prettier)
-
-#### JSON linters and formatters
-
-* [jsonlint](https://github.com/zaach/jsonlint)
-* [fixjson](https://github.com/rhysd/fixjson)
-* [prettier](https://github.com/prettier/prettier)
-
-#### Markdown linters and formatters
-
-* [markdownlint](https://github.com/markdownlint/markdownlint/)
-* [prettier](https://github.com/prettier/prettier)
+| Language   | Linters and formatters                                                                                                                                                                                                         |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Python     | <ul><li>[pylint](https://www.pylint.org/)</li> <li>[flake8](https://github.com/PyCQA/flake8)</li> <li>[autopep8](https://github.com/hhatto/autopep8)</li></ul>                                                                 |
+| PHP        | <ul><li>[phpcs](https://github.com/squizlabs/PHP_CodeSniffer)</li> <li>[phpcbf](https://github.com/squizlabs/PHP_CodeSniffer) (part of phpcs).</li> <li>[PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)</li></ul> |
+| HTML       | <ul><li>[htmlhint](https://github.com/yaniswang/HTMLHint)</li></ul>                                                                                                                                                            |
+| JavaScript | <ul><li>[eslint](https://eslint.org/) (Also set for Vue.js).</li> <li>[jshint](http://jshint.com/)</li> <li>[prettier](https://github.com/prettier/prettier)</li></ul>                                                         |
+| CSS        | <ul><li>[csslint](https://github.com/CSSLint/csslint)</li> <li>[prettier](https://github.com/prettier/prettier)</li></ul>                                                                                                      |
+| JSON       | <ul><li>[jsonlint](https://github.com/zaach/jsonlint)</li> <li>[fixjson](https://github.com/rhysd/fixjson)</li> <li>[prettier](https://github.com/prettier/prettier)</li></ul>                                                 |
+| Markdown   | <ul><li>[markdownlint](https://github.com/markdownlint/markdownlint/)</li> <li>[prettier](https://github.com/prettier/prettier)</li></ul>                                                                                      |
 
 ### Not used plugins
 
@@ -87,7 +87,7 @@ replaced, but that are interesting.
 
 * [vim-colors-pencil](https://github.com/reedes/vim-colors-pencil): color scheme.
 
-## Custom mappings, autocommands, abbreviations, etc. cheatsheet
+## Custom mappings, autocommands, abbreviations, etc
 
 ### Mappings
 
