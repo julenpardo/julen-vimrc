@@ -78,6 +78,8 @@ let g:ale_linters = {
 \    'vue': ['eslint'],
 \    'css': ['csslint'],
 \    'markdown': ['mdl'],
+\    'bash': ['shellcheck'],
+\    'vim': ['vint']
 \}
 
 let g:ale_php_phpcs_standard = 'psr2'
@@ -92,6 +94,7 @@ let g:ale_fixers = {
 \    'vim': ['remove_trailing_lines', 'trim_whitespace'],
 \    'css': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 \    'markdown': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
+\    'bash': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
@@ -233,7 +236,7 @@ nnoremap <Leader>W :wa<cr>
 nnoremap <Leader>q :q<cr>
 nnoremap <Leader>Q :qa<cr>
 nnoremap <Leader>! :qa!<cr>
-nnoremap <Leader>r :e!kcr>
+nnoremap <Leader>r :e!<cr>
 nnoremap <Leader>d :bprev\|bd #<cr>
 
 " Copy-pasting
@@ -272,25 +275,49 @@ augroup END
 augroup python_abbreviations
     autocmd!
     autocmd FileType python :inoreabbrev <buffer> i if:<Left>
+    autocmd FileType python :inoreabbrev <buffer> eli elif:<Left>
+    autocmd FileType python :inoreabbrev <buffer> el else:<cr><Space><BS><BS>
     autocmd FileType python :inoreabbrev <buffer> f for:<Left>
     autocmd FileType python :inoreabbrev <buffer> w while:<Left>
-    autocmd FileType python :inoreabbrev <buffer> d def():<Esc>bi
+    autocmd FileType python :inoreabbrev <buffer> d def():<Esc>
+    autocmd FileType python :inoreabbrev <buffer> re return
+    autocmd FileType python :inoreabbrev <buffer> t try:<cr>except:<Esc>ko<Space><BS><BS>
+    autocmd FileType python :inoreabbrev <buffer> tr True
+    autocmd FileType python :inoreabbrev <buffer> fa False
+    autocmd FileType python :inoreabbrev <buffer> br break
+    autocmd FileType python :inoreabbrev <buffer> co continue
 augroup END
 
 augroup php_abbreviations
     autocmd!
     autocmd FileType php :inoreabbrev <buffer> i if () {<cr>}<Esc>k2ei
+    autocmd FileType php :inoreabbrev <buffer> eli else if () {<cr>}<Esc>k3ei
+    autocmd FileType php :inoreabbrev <buffer> el else {<cr>}<Esc>ko<Space><BS><BS>
     autocmd FileType php :inoreabbrev <buffer> f for () {<cr>}<Esc>k2ei
     autocmd FileType php :inoreabbrev <buffer> w while () {<cr>}<Esc>k2ei
     autocmd FileType php :inoreabbrev <buffer> fu function()<cr>{<cr>}<Esc>2kwi
+    autocmd FileType php :inoreabbrev <buffer> re return
+    autocmd FileType php :inoreabbrev <buffer> t try {<cr>} catch () {<cr>}<Esc>2ko<Space><BS><BS>
+    autocmd FileType php :inoreabbrev <buffer> tr true
+    autocmd FileType php :inoreabbrev <buffer> fa false
+    autocmd FileType php :inoreabbrev <buffer> br break
+    autocmd FileType php :inoreabbrev <buffer> co continue
 augroup END
 
 augroup javascript_abbreviations
     autocmd!
     autocmd FileType javascript :inoreabbrev <buffer> i if () {<cr>}<Esc>k2ei
+    autocmd FileType javascript :inoreabbrev <buffer> eli else if () {<cr>}<Esc>k3ei
+    autocmd FileType javascript :inoreabbrev <buffer> el else {<cr>}<Esc>ko<Space><BS><BS>
     autocmd FileType javascript :inoreabbrev <buffer> f for () {<cr>}<Esc>k2ei
     autocmd FileType javascript :inoreabbrev <buffer> w while () {<cr>}<Esc>k2ei
     autocmd FileType javascript :inoreabbrev <buffer> fu function() {<cr>}<Esc>kwi
+    autocmd FileType javascript :inoreabbrev <buffer> re return
+    autocmd FileType javascript :inoreabbrev <buffer> t try {<cr>} catch () {<cr>}<Esc>2ko<Space><BS><BS>
+    autocmd FileType javascript :inoreabbrev <buffer> tr true
+    autocmd FileType javascript :inoreabbrev <buffer> fa false
+    autocmd FileType javascript :inoreabbrev <buffer> br break
+    autocmd FileType javascript :inoreabbrev <buffer> co continue
 augroup END
 
 

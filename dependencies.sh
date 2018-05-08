@@ -5,9 +5,12 @@ git clone https://github.com/gmarik/Vundle.vim.git "$USER_HOME/.vim/bundle/Vundl
 
 sudo apt-get update
 
-# Dependencies
+##################
+# Apt dependencies
+##################
 sudo apt-get install -y python-dev \
-                        python3-dev
+                        python3-dev \
+                        shellcheck
 
 ################
 # Python modules
