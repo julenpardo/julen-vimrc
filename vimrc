@@ -17,6 +17,11 @@ Plugin 'gmarik/Vundle.vim'
 
 " General
 
+" fzf
+set runtimepath+=~/.fzf/bin
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+
 " Asynchronous lint
 Plugin 'w0rp/ale'
 " File Browsing
@@ -211,6 +216,10 @@ set foldlevel=99
 """""""""""""""""
 
 let g:mapleader = "\<Space>"
+
+" fzf
+nnoremap <Leader>t :Files<cr>
+nnoremap <Leader>b :Buffers<cr>
 
 " Return from insert mode to normal mode
 inoremap jk <Esc>
