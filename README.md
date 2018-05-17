@@ -35,6 +35,7 @@ My Vimrc with plugins, autocommands, etc for **Vim 8**.
 ### General
 
 * [gruvbox](https://github.com/morhetz/gruvbox): color scheme.
+* [fzf.vim](https://github.com/junegunn/fzf.vim): wrapper for fzf.
 * [NERDTree](https://github.com/scrooloose/nerdtree): file browsing.
 * [Powerline](https://github.com/Lokaltog/powerline): cool status bar.
 * [vim-buftabline](https://github.com/ap/vim-buftabline): easy buffer
@@ -43,6 +44,7 @@ My Vimrc with plugins, autocommands, etc for **Vim 8**.
   and preview.
 * [rename.vim](https://github.com/danro/rename.vim): Rename files (need a
   plugin for this?).
+* [vim-ripgrep](https://github.com/jremmen/vim-ripgrep): ripgrep for Vim.
 
 ### Language agnostic
 

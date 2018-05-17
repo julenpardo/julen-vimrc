@@ -43,6 +43,8 @@ Plugin 'danro/rename.vim'
 Plugin 'tpope/vim-surround'
 " Autocomplete
 Plugin 'Valloric/YouCompleteMe'
+" Ripgrep
+Plugin 'jremmen/vim-ripgrep'
 
 
 " Python
