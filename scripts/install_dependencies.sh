@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Vundle installation
-git clone https://github.com/gmarik/Vundle.vim.git "$USER_HOME/.vim/bundle/Vundle.vim"
+git clone https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
 
 sudo apt-get update
 

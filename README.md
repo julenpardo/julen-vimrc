@@ -61,7 +61,7 @@ its update pulling the repo.
 If you don't want to pull it, you can just directly save the file the file as `~/.vimrc`:
 
 ```bash
-curl -o `~/.vimrc` https://raw.githubusercontent.com/julenpardo/vimrc/master/vimrc_basic
+curl -o ~/.vimrc https://raw.githubusercontent.com/julenpardo/vimrc/master/vimrc_basic
 ```
 
 #### Extended
