@@ -6,6 +6,12 @@ My Vimrc with plugins, autocommands, etc for **Vim 8**.
 
 <!-- toc -->
 
+* [The vimrcs](#the-vimrcs)
+  * [Installation](#installation)
+    * [Basic](#basic)
+    * [Extended](#extended)
+  * [Updating](#updating)
+    * [Updating extended version](#updating-extended-version)
 * [Plugins](#plugins)
   * [General](#general)
   * [Language agnostic](#language-agnostic)
@@ -30,6 +36,75 @@ My Vimrc with plugins, autocommands, etc for **Vim 8**.
 
 <sub>Generated with [markdown-toc](https://github.com/jonschlinkert/markdown-toc)</sub>
 
+## The vimrcs
+
+There are two versions:
+
+* Basic: mappings, abbreviations, autocommands, etc. No plugin nor dependency is
+  needed.
+* Extended: built on the basic, with many plugins.
+
+### Installation
+
+#### Basic
+
+The recommended way is to clone the repository and execute `scripts/install_basic.sh`:
+
+```bash
+git clone https://github.com/julenpardo/vimrc ~/vimrc # Or wherever you want
+~/vimrc/scripts/install_basic.sh
+```
+
+This will just create the `~/.vimrc` file as a link pointing to `vimrc_basic`, allowing
+its update pulling the repo.
+
+If you don't want to pull it, you can just directly save the file the file as `~/.vimrc`:
+
+```bash
+curl -o `~/.vimrc` https://raw.githubusercontent.com/julenpardo/vimrc/master/vimrc_basic
+```
+
+#### Extended
+
+Apart from cloning the repo, the installation scripts have to be executed:
+
+```bash
+git clone https://github.com/julenpardo/vimrc ~/vimrc # Or wherever you want
+~/vimrc/scripts/install_dependencies.sh
+~/vimrc/scripts/install_extended.sh
+~/vimrc/scripts/install_powerline_fonts.sh
+~/vimrc/scripts/compile_youcompleteme.sh
+```
+
+This will:
+
+* Install Vundle, for managing the plugins.
+* Create the `~/.vimrc` file.
+* Install the plugins and their dependencies.
+* Install the powerline fonts, needed for the Powerline bar.
+* Compile YouCompleteMe, needed for the namesake plugin.
+
+### Updating
+
+For both basic and extended, we need to pull:
+
+```bash
+cd ~/vimrc # Or wherever it was cloned
+git pull
+```
+
+This is enough for the basic mode. For the extended mode, keep reading.
+
+#### Updating extended version
+
+For the extended version, the `scripts/install_extended.sh` script has to be run
+again. This script just creates the `~/.vimrc` file merging the `vimrc_basic` and
+`vimrc_extended` files, and then runs the Vim command to install/update the plugins
+with Vundle.
+
+The `scripts/install_dependencies.sh` should be also run, since there may be new
+dependencies required by the plugins.
+
 ## Plugins
 
 ### General
@@ -51,7 +126,7 @@ My Vimrc with plugins, autocommands, etc for **Vim 8**.
 * [ale](https://github.com/w0rp/ale): asynchronous linting.
 * [nerdcommenter](https://github.com/scrooloose/nerdcommenter): code commenting.
 * [vim-surround](https://github.com/tpope/vim-surround): bracket, quote, etc. wrapping.
-* [autocomplete](https://github.com/valloric/youcompleteme): code completion.
+* [YouCompleteMe](https://github.com/valloric/youcompleteme): code completion.
 
 ### Python
 
