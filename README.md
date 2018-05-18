@@ -120,6 +120,7 @@ dependencies required by the plugins.
 * [rename.vim](https://github.com/danro/rename.vim): Rename files (need a
   plugin for this?).
 * [vim-ripgrep](https://github.com/jremmen/vim-ripgrep): ripgrep for Vim.
+* [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Git diff in gutter.
 
 ### Language agnostic
 

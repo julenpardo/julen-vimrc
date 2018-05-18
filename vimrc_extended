@@ -1,3 +1,7 @@
+"""""""""""""""""""""""""""""""
+"""""""" Extended Mode """"""""
+"""""""""""""""""""""""""""""""
+
 """""""""
 " Plugins
 """""""""
@@ -22,29 +26,38 @@ set runtimepath+=~/.fzf/bin
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
-" Asynchronous lint
-Plugin 'w0rp/ale'
 " File Browsing
 Plugin 'scrooloose/nerdtree'
+" Git plugin for NERDTree
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Powerline status bar, and fonts
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Buffer navigation
 Plugin 'ap/vim-buftabline'
 " Color scheme
 Plugin 'morhetz/gruvbox'
-" Code commenting
-Plugin 'scrooloose/nerdcommenter'
 " Markdown syntax
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " Rename files
 Plugin 'danro/rename.vim'
+" Ripgrep
+Plugin 'jremmen/vim-ripgrep'
+" Git diff in gutter
+Plugin 'airblade/vim-gitgutter'
+" Search autocompletion
+Plugin 'vim-scripts/SearchComplete'
+
+" Language agnostic
+
+" Asynchronous lint
+Plugin 'w0rp/ale'
 " Surrouning
 Plugin 'tpope/vim-surround'
 " Autocomplete
 Plugin 'Valloric/YouCompleteMe'
-" Ripgrep
-Plugin 'jremmen/vim-ripgrep'
+" Code commenting
+Plugin 'scrooloose/nerdcommenter'
 
 
 " Python

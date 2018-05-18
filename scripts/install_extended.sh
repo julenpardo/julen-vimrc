@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cp "$DIR/../vimrc_basic" "$HOME/.vimrc"
+\cp "$DIR/../vimrc_basic" "$HOME/.vimrc"
 cat "$DIR/../vimrc_extended" >> "$HOME/.vimrc"
 
 
