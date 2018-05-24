@@ -4,6 +4,7 @@
 
 set encoding=utf-8
 filetype off
+set clipboard=unnamedplus " Set desktop clipboard
 
 """""""""
 " Spacing
@@ -94,6 +95,9 @@ set foldlevel=99
 
 let g:mapleader = "\<Space>"
 
+" Copy to clipboard
+vnoremap <Leader>c :%y<cr>
+
 " Return from insert mode to normal mode
 inoremap jk <Esc>
 
@@ -120,11 +124,6 @@ nnoremap <Leader>Q :qa<cr>
 nnoremap <Leader>! :qa!<cr>
 nnoremap <Leader>r :e!<cr>
 nnoremap <Leader>d :bprev\|bd #<cr>
-
-" Copy-pasting
-inoremap <C-D> <Esc>ddi
-inoremap <C-V> <Esc>pA
-inoremap <C-X> <Esc>yyli
 
 " Insert new line below, usefull for if, for, etc. statements
 inoremap <C-Space> <Esc>o

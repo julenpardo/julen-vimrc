@@ -188,11 +188,7 @@ replaced, but that are interesting.
 * `<Left>`: increase current split vertically.
 * `<Right>`: decrease current split vertically.
 
-##### Oders
-
-* `<Leader>sv`: source .vimrc.
-
-##### File management
+##### Buffers
 
 * `<Leader>w`: write current buffer.
 * `<Leader>W`: write all buffers.
@@ -204,11 +200,19 @@ replaced, but that are interesting.
   thought for NERDTree, otherwise the only window remaining is the one for the
   tree).
 
+##### Oders
+
+* `<Leader>sv`: source .vimrc.
+
 #### Insert mode
 
 * `jk`: return to normal mode.
 * `<C-Space>`: insert new line below, useful when we are on `if`, `for`, etc.
   statements, so we don't need to go to the end of the line and insert new one.
+
+#### Visual mode
+
+* `<Leader>c`: copy selection to desktop clipboard.
 
 ### Abbreviations
 

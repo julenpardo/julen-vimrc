@@ -58,7 +58,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
 " Code commenting
 Plugin 'scrooloose/nerdcommenter'
-
+" Auto pairs (brackets, quotes, etc.)
+Plugin 'jiangmiao/auto-pairs'
 
 " Python
 
