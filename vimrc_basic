@@ -25,6 +25,7 @@ syntax enable
 " UI
 """"
 
+colorscheme darkblue
 highlight ExtraWhitespace ctermbg=red
 set number
 set cursorline
@@ -40,7 +41,7 @@ set statusline+=%{&fileformat}]              " file format
 set statusline+=%=                           " right align
 set statusline+=0x%-8B\                      " current char
 set statusline+=%-10.(%l,%c%V%)\ %<%P        " offset
-hi StatusLine ctermbg=3 ctermfg=10
+highlight StatusLine ctermbg=3 ctermfg=10
 highlight CursorLine ctermbg=darkgrey
 highlight LineNr ctermbg=darkgrey ctermfg=white
 
