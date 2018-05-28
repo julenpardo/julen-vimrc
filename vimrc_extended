@@ -47,6 +47,8 @@ Plugin 'jremmen/vim-ripgrep'
 Plugin 'airblade/vim-gitgutter'
 " Search autocompletion
 Plugin 'vim-scripts/SearchComplete'
+" Update continuously session files
+Plugin 'tpope/vim-obsession'
 
 " Language agnostic
 
@@ -79,6 +81,11 @@ Plugin 'Valloric/MatchTagAlways'
 Plugin 'pangloss/vim-javascript'
 " Vue highlighting
 Plugin 'posva/vim-vue'
+
+" Yaml/Ansible
+
+" Ansible syntax
+Plugin 'pearofducks/ansible-vim'
 
 
 " All of your Plugins must be added before the following line
@@ -141,6 +148,18 @@ let g:gruvbox_italic=1
 set background=dark
 colorscheme gruvbox
 
+" tpope/obsession
+" Start recording session on vim start.
+augroup session
+    autocmd!
+    autocmd VimEnter * if (exists('this_obsession') == 0) | :Obsession | endif
+augroup END
+
+" pearofducks/ansible-vim
+augroup set_ansible_filetypes
+    autocmd!
+    autocmd BufRead */*ansible*/*.yml set filetype=yaml.ansible
+augroup END
 
 
 """""""""""""""""

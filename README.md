@@ -121,6 +121,8 @@ dependencies required by the plugins.
   plugin for this?).
 * [vim-ripgrep](https://github.com/jremmen/vim-ripgrep): ripgrep for Vim.
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Git diff in gutter.
+* [vim-obsession](https://github.com/tpope/vim-obsession): continuously update
+  session files.
 
 ### Language agnostic
 
@@ -142,6 +144,10 @@ dependencies required by the plugins.
 * [vim-javascript](https://github.com/pangloss/vim-javascript): JavaScript
   syntax (works for inline js!).
 * [vim-vue](https://github.com/posva/vim-vue): Vue syntax highlighting.
+
+### Yaml/Ansible
+
+* [ansible-vim](https://github.com/pearofducks/ansible-vim): Ansible syntax.
 
 ### Linters and formatting for ALE
 
