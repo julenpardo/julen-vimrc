@@ -112,6 +112,8 @@ dependencies required by the plugins.
 * [gruvbox](https://github.com/morhetz/gruvbox): color scheme.
 * [fzf.vim](https://github.com/junegunn/fzf.vim): wrapper for fzf.
 * [NERDTree](https://github.com/scrooloose/nerdtree): file browsing.
+* [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin): git plugin
+  for NERDTree.
 * [Powerline](https://github.com/Lokaltog/powerline): cool status bar.
 * [vim-buftabline](https://github.com/ap/vim-buftabline): easy buffer
   navigation in tabs.

@@ -70,6 +70,10 @@ Plugin 'heavenshell/vim-pydocstring'
 " PEP8 indentation
 Plugin 'vim-scripts/indentpython.vim'
 
+" C
+"
+" Syntax
+Plugin 'justinmk/vim-syntax-extra'
 
 " HTML, CSS, JavaScript
 
@@ -169,3 +173,6 @@ augroup END
 " fzf
 nnoremap <Leader>t :Files<cr>
 nnoremap <Leader>b :Buffers<cr>
+
+" ripgrep
+nnoremap <Leader>R :Rg<Space>

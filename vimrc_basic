@@ -161,7 +161,7 @@ augroup python_abbreviations
     autocmd FileType python :inoreabbrev <buffer> el else:<cr><Space><BS><BS>
     autocmd FileType python :inoreabbrev <buffer> f for:<Left>
     autocmd FileType python :inoreabbrev <buffer> w while:<Left>
-    autocmd FileType python :inoreabbrev <buffer> d def():<Esc>
+    autocmd FileType python :inoreabbrev <buffer> d def():<Esc>bi
     autocmd FileType python :inoreabbrev <buffer> re return
     autocmd FileType python :inoreabbrev <buffer> t try:<cr>except:<Esc>ko<Space><BS><BS>
     autocmd FileType python :inoreabbrev <buffer> tr True
