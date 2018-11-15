@@ -25,7 +25,7 @@ syntax enable
 " UI
 """"
 
-colorscheme darkblue
+colorscheme desert
 highlight ExtraWhitespace ctermbg=red
 set number
 set cursorline
@@ -117,6 +117,15 @@ nnoremap <Down> :resize -2<cr>
 nnoremap <Left> :vertical resize +2<cr>
 nnoremap <Right> :vertical resize -2<cr>
 
+" Split existing buffers
+nnoremap <Leader>hb :sb
+nnoremap <Leader>vb :vertical sb
+
+" List and switch buffers
+nnoremap <Leader>ls :ls<cr>
+" Next mapping is overwriten by the extended config for fzf integration
+nnoremap <Leader>b :ls<CR>:b<Space>
+
 " Fast save and exit
 nnoremap <Leader>w :w<cr>
 nnoremap <Leader>W :wa<cr>
@@ -128,6 +137,9 @@ nnoremap <Leader>d :bprev\|bd #<cr>
 
 " Insert new line below, usefull for if, for, etc. statements
 inoremap <C-Space> <Esc>o
+
+" Break line
+nnoremap <C-J> i<CR><ESC>
 
 " Source vimrc
 nnoremap <Leader>sv :source $MYVIMRC<cr>
@@ -152,6 +164,7 @@ augroup set_filetypes
     autocmd!
     autocmd BufRead *.wsgi set syntax=python filetype=python
     autocmd BufRead *.twig set syntax=html filetype=html
+    autocmd BufRead *.vue set syntax=vue filetype=vue
 augroup END
 
 augroup python_abbreviations

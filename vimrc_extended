@@ -39,14 +39,13 @@ Plugin 'morhetz/gruvbox'
 " Markdown syntax
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'iamcco/markdown-preview.vim'
 " Rename files
 Plugin 'danro/rename.vim'
 " Ripgrep
 Plugin 'jremmen/vim-ripgrep'
 " Git diff in gutter
 Plugin 'airblade/vim-gitgutter'
-" Search autocompletion
-Plugin 'vim-scripts/SearchComplete'
 " Update continuously session files
 Plugin 'tpope/vim-obsession'
 
@@ -103,7 +102,7 @@ filetype plugin indent on    " required
 " ALE
 let g:ale_linters = {
 \    'python': ['pylint', 'flake8'],
-\    'javascript': ['eslint', 'jshint'],
+\    'javascript': ['eslint'],
 \    'php': ['phpcs'],
 \    'html': ['eslint', 'htmlhint'],
 \    'json': ['jsonlint'],
@@ -113,6 +112,8 @@ let g:ale_linters = {
 \    'bash': ['shellcheck'],
 \    'vim': ['vint']
 \}
+
+let g:ale_python_pylint_change_directory = 0
 
 let g:ale_php_phpcs_standard = 'psr2'
 
