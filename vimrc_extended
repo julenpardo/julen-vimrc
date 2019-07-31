@@ -119,7 +119,7 @@ let g:ale_php_phpcs_standard = 'psr2'
 
 let g:ale_fixers = {
 \    'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
-\    'javascript': ['eslint', 'prettier', 'remove_trailing_lines', 'trim_whitespace'],
+\    'javascript': ['eslint', 'remove_trailing_lines', 'trim_whitespace'],
 \    'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
 \    'html': ['remove_trailing_lines', 'trim_whitespace'],
 \    'json': ['fixjson', 'prettier', 'remove_trailing_lines', 'trim_whitespace'],
