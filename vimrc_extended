@@ -55,8 +55,8 @@ Plugin 'tpope/vim-obsession'
 Plugin 'w0rp/ale'
 " Surrouning
 Plugin 'tpope/vim-surround'
-" Autocomplete
-Plugin 'Valloric/YouCompleteMe'
+" Jedi Vim
+Plugin 'davidhalter/jedi-vim'
 " Code commenting
 Plugin 'scrooloose/nerdcommenter'
 " Auto pairs (brackets, quotes, etc.)
