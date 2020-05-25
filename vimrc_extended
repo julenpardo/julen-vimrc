@@ -57,6 +57,8 @@ Plugin 'w0rp/ale'
 Plugin 'tpope/vim-surround'
 " Jedi Vim
 Plugin 'davidhalter/jedi-vim'
+" Tab autocompletion
+Plugin 'ervandew/supertab'
 " Code commenting
 Plugin 'scrooloose/nerdcommenter'
 " Auto pairs (brackets, quotes, etc.)
