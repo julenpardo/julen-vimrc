@@ -57,6 +57,9 @@ syntax on
 """"""""
 " Python
 """"""""
+augroup python_autocommands
+    autocmd FileType python nnoremap <buffer> <Leader>G ofrom ipdb import set_trace; from pprint import pprint as pp;set_trace(context=6)<Esc>
+augroup END
 
 """"""""""""""""""
 " PEP8 indentation
