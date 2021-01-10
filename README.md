@@ -44,6 +44,11 @@ There are two versions:
   needed.
 * Extended: built on the basic, with many plugins.
 
+
+## Requirements
+
+[Vundle](https://github.com/VundleVim/Vundle.vim) plugin manager (see [Quick Start](https://github.com/VundleVim/Vundle.vim#quick-start) section).
+
 ### Installation
 
 #### Basic
